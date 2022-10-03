@@ -39,10 +39,16 @@ export default function Home() {
         ):(
           posts?.map((post)=>(
             <Fragment key={post.id}>
-              <div>id: {post.id}</div>
-              <div>title: {post.title}</div>
-              <div>content: {post.content}</div>
-              <div>createdAt: {post.createdAt}</div>
+              <br/>
+              <Link href={`/post/${post.id}`}>
+                <a>
+                  <div>id: {post.id}</div>
+                  <div>title: {post.title}</div>
+                  <div>content: {post.description.slice(0,100)} ... </div>
+                  <div>createdAt: {post.author}</div>
+                </a>
+              </Link>
+
             </Fragment>
           ))
         )}
