@@ -4,6 +4,7 @@ import {QueryClient, QueryClientProvider} from "react-query";
 import {ReactQueryDevtools} from "react-query/devtools";
 
 function MyApp({ Component, pageProps }) {
+
   // queryClient 인스턴스만들기. queryClientProvider의 props로 전달.
   const [queryClient] = useState(()=> new QueryClient())
 
@@ -20,3 +21,4 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp
+
